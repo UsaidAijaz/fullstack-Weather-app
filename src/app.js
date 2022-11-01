@@ -9,6 +9,7 @@ import * as wea from "./utils/weather.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
+const port = process.env.PORT || 3000;
 
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
@@ -88,8 +89,7 @@ app.get("*", (req, res) => {
     name: "Usaid",
     errorMessage: "Page not found",
   });
-  //   res.send("Page Not found");
 });
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server is running on 3000");
 });

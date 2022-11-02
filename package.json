@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js -e js,hbs"
+    "dev": "nodemon src/app.js -e js,hbs",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -18,10 +19,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  },
-  "engines": {
-    "node": "0.10.41",
-    "npm": "1.4.29"
   }
 }
 
